@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:padding="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Your Edit Data"
+                android:textStyle="italic"
+                android:textSize="20sp"
+               android:layout_centerHorizontal="true"/>
+            <EditText
+                android:id="@+id/edit_name"
+                android:hint="Enter Your Name:"
+                android:layout_below="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <EditText
+                android:layout_marginTop="5dp"
+                android:id="@+id/edit_job"
+                android:hint="Enter Your Job: "
+                android:layout_below="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <EditText
+                android:layout_marginTop="5dp"
+                android:id="@+id/edit_phone"
+                android:hint="Enter Your Phone "
+                android:layout_below="@+id/edit_job"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                />
+
+            <Button
+                android:layout_marginTop="5dp"
+                android:id="@+id/submit"
+                android:layout_below="@+id/edit_phone"
+                android:text="Submit"
+                android:background="@color/colorAccent"
+                android:textColor="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

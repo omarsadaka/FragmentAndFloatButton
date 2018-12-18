@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF"
+    android:elevation="5dp"
+    android:layout_gravity="bottom"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:src="@drawable/menu"/>
+
+        <TextView
+            android:id="@+id/menu_title"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cart"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:src="@drawable/cart"/>
+
+        <TextView
+            android:id="@+id/cart_title"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Cart"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cake"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:src="@drawable/cake"/>
+
+        <TextView
+            android:id="@+id/cake_title"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Cake"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/offer"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:src="@drawable/offer"/>
+
+        <TextView
+            android:id="@+id/offer_title"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="Offer"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/more"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:src="@drawable/more"/>
+
+        <TextView
+            android:id="@+id/more_title"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="More"/>
+
+    </LinearLayout>
+
+</LinearLayout>
