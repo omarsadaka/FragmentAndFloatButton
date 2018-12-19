@@ -1,8 +1,6 @@
 package com.example.omar.fragfloat.Fragment;
 
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.omar.fragfloat.Adapter.FirebaseAdapter;
-import com.example.omar.fragfloat.MainActivity;
+import com.example.omar.fragfloat.Avtivities.MainActivity;
 import com.example.omar.fragfloat.Model.ListItem;
 import com.example.omar.fragfloat.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,7 +26,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 
 public class CartFragment extends Fragment {
@@ -69,7 +66,7 @@ public class CartFragment extends Fragment {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if(s!=null)
+                if(s!=null||!s.toString().isEmpty())
                     adapter.getFilter().filter(s.toString());
             }
         });

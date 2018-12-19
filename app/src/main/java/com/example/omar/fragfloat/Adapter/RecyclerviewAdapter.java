@@ -1,6 +1,7 @@
 package com.example.omar.fragfloat.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Movie;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -13,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.omar.fragfloat.Avtivities.MenuDetailsActivity;
 import com.example.omar.fragfloat.Model.Movies;
 import com.example.omar.fragfloat.R;
 import com.squareup.picasso.Picasso;
@@ -113,6 +115,9 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
                 public void onClick(View v) {
                     Movies movies = movieList.get(getAdapterPosition());
                     Toast.makeText(context1, "You Clicked " + movies.getName(), Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(context , MenuDetailsActivity.class);
+                    intent.putExtra("data" , movies);
+                    context.startActivity(intent);
                 }
             });
         }

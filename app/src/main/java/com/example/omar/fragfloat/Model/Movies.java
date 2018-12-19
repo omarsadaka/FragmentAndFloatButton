@@ -1,12 +1,13 @@
 package com.example.omar.fragfloat.Model;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by Omar on 12/11/2018.
  */
 
-public class Movies {
+public class Movies implements Serializable{
 
 
     /**

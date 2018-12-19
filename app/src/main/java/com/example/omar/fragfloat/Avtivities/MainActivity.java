@@ -1,7 +1,6 @@
-package com.example.omar.fragfloat;
+package com.example.omar.fragfloat.Avtivities;
 
 import android.app.ProgressDialog;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -23,6 +22,7 @@ import com.example.omar.fragfloat.Fragment.CartFragment;
 import com.example.omar.fragfloat.Fragment.MenuFragment;
 import com.example.omar.fragfloat.Fragment.MoreFragment;
 import com.example.omar.fragfloat.Fragment.OfferFragment;
+import com.example.omar.fragfloat.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;

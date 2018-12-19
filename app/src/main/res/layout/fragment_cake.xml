@@ -3,16 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.omar.fragfloat.Fragment.CakeFragment">
-
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:textColor="#1e209c"
-        android:gravity="center"
-        android:text="Fragment Cake" />
-
+   <android.support.v7.widget.RecyclerView
+       android:id="@+id/films_recycler"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       tools:listitem="@layout/films_item_row"
+       />
 </FrameLayout>
