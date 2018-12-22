@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.omar.fragfloat.Avtivities.FilmDetailsActivity;
-import com.example.omar.fragfloat.Model.Movies;
 import com.example.omar.fragfloat.Model.ResultsBean;
 import com.example.omar.fragfloat.R;
 import com.squareup.picasso.Picasso;

@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -29,7 +31,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private LinearLayout menu, cart, cake, offer, more;
+    private LinearLayout menu, cart, cake, offer, more ,menuDrawer , cartDrawer , cakeDrawer , offerDrawer , moreDrawer;
     private TextView menuTitle, cartTitle, cakeTitle, offerTitle, moreTitle;
     private ImageView back, add, search;
     public EditText search_view;
@@ -39,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private FirebaseAuth mAuth;
     private DatabaseReference mReference;
     private ProgressDialog progressDialog;
+    private DrawerLayout drawerLayout;
+    private ImageView openDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +75,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         search_view = findViewById(R.id.search_view);
         titleToolbar = findViewById(R.id.title_toolbar);
         add = findViewById(R.id.add);
+        drawerLayout = findViewById(R.id.deawer_layout);
+        openDrawer = findViewById(R.id.openDrawer);
+        menuDrawer = findViewById(R.id.menuDrawer);
+        cartDrawer = findViewById(R.id.cartDrawer);
+        cakeDrawer = findViewById(R.id.cakeDrawer);
+        offerDrawer = findViewById(R.id.offerDrawer);
+        moreDrawer = findViewById(R.id.moreDrawer);
     }
 
     private void createClicks() {
@@ -82,6 +93,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         back.setOnClickListener(this);
         search.setOnClickListener(this);
         add.setOnClickListener(this);
+        openDrawer.setOnClickListener(this);
+        menuDrawer.setOnClickListener(this);
+        cartDrawer.setOnClickListener(this);
+        cakeDrawer.setOnClickListener(this);
+        offerDrawer.setOnClickListener(this);
+        moreDrawer.setOnClickListener(this);
     }
 
     @Override
@@ -130,10 +147,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 add.setVisibility(View.GONE);
                 titleToolbar.setVisibility(View.GONE);
                 search.setVisibility(View.GONE);
+                openDrawer.setVisibility(View.GONE);
                 search_view.setVisibility(View.VISIBLE);
                 back.setVisibility(View.VISIBLE);
                 break;
-
+            case R.id.openDrawer:
+                drawerLayout.openDrawer(GravityCompat.START);
+                break;
+            case R.id.menuDrawer:
+                drawerLayout.closeDrawer(GravityCompat.START);
+                searchVisibility();
+                showClickedItem(menuTitle);
+                startFragment(new MenuFragment());
+                break;
+            case R.id.cartDrawer:
+                drawerLayout.closeDrawer(GravityCompat.START);
+                searchVisibility();
+                showClickedItem(cartTitle);
+                startFragment(new CartFragment());
+                break;
+            case R.id.cakeDrawer:
+                drawerLayout.closeDrawer(GravityCompat.START);
+                searchVisibility();
+                showClickedItem(cakeTitle);
+                startFragment(new CakeFragment());
+                break;
+            case R.id.offerDrawer:
+                drawerLayout.closeDrawer(GravityCompat.START);
+                searchVisibility();
+                showClickedItem(offerTitle);
+                startFragment(new OfferFragment());
+                break;
+            case R.id.moreDrawer:
+                drawerLayout.closeDrawer(GravityCompat.START);
+                searchVisibility();
+                showClickedItem(moreTitle);
+                startFragment(new MoreFragment());
+                break;
 
         }
     }
@@ -226,6 +276,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         add.setVisibility(View.VISIBLE);
         search.setVisibility(View.VISIBLE);
         titleToolbar.setVisibility(View.VISIBLE);
+        openDrawer.setVisibility(View.VISIBLE);
     }
 
     private void startFragment(Fragment fragment) {

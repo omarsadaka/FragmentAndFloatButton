@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/actionBar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:background="#303F9F"
         android:padding="7dp">
+        <ImageView
+            android:id="@+id/openDrawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_menu_black_24dp"/>
 
         <ImageView
             android:id="@+id/add"
@@ -43,7 +54,7 @@
         <EditText
             android:id="@+id/search_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:hint="Search"
             android:textColorHint="#fff"
             android:textColor="#FFF"
@@ -61,7 +72,9 @@
             android:visibility="gone"
 
             />
-
     </RelativeLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <include
+        layout="@layout/content_main" />
+
+</LinearLayout>
