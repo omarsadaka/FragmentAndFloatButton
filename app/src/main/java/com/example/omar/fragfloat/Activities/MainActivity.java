@@ -1,4 +1,4 @@
-package com.example.omar.fragfloat.Avtivities;
+package com.example.omar.fragfloat.Activities;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;

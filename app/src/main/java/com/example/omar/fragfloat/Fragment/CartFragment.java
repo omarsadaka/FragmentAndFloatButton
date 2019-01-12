@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.omar.fragfloat.Adapter.FirebaseAdapter;
-import com.example.omar.fragfloat.Avtivities.MainActivity;
+import com.example.omar.fragfloat.Activities.MainActivity;
 import com.example.omar.fragfloat.Model.ListItem;
 import com.example.omar.fragfloat.R;
 import com.google.firebase.auth.FirebaseAuth;

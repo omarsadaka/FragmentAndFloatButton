@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iconInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/ic_dialog_alert"/>
+            <TextView
+                android:id="@+id/winTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/iconInfo"
+                android:text="Hello"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/magnitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/iconInfo"
+                android:layout_below="@+id/winTitle"
+                android:text="Magnitude" />
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="More Info..."
+                android:layout_toEndOf="@+id/magnitude"
+                android:layout_alignBottom="@+id/magnitude"
+                android:background="@android:color/transparent"
+                android:textColor="@color/colorAccent"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

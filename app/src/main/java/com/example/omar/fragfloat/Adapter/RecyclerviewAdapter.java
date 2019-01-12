@@ -2,7 +2,6 @@ package com.example.omar.fragfloat.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Movie;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.omar.fragfloat.Avtivities.MenuDetailsActivity;
+import com.example.omar.fragfloat.Activities.MenuDetailsActivity;
 import com.example.omar.fragfloat.Model.Movies;
 import com.example.omar.fragfloat.R;
 import com.squareup.picasso.Picasso;

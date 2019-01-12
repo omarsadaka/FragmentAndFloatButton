@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import com.example.omar.fragfloat.Adapter.RecyclerviewAdapter;
 import com.example.omar.fragfloat.Data.ApiClient;
 import com.example.omar.fragfloat.Data.ApiInterface;
-import com.example.omar.fragfloat.Avtivities.MainActivity;
+import com.example.omar.fragfloat.Activities.MainActivity;
 import com.example.omar.fragfloat.Model.Movies;
 import com.example.omar.fragfloat.R;
 
