@@ -113,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.cart:
                 searchVisibility();
+                add.setVisibility(View.VISIBLE);
                 showClickedItem(cartTitle);
                 startFragment(new CartFragment());
                 break;
@@ -124,13 +125,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.offer:
-                searchVisibility();
+                //searchVisibility();
+                specialVisibility();
                 showClickedItem(offerTitle);
                 startFragment(new OfferFragment());
                 break;
 
             case R.id.more:
-                searchVisibility();
+                //searchVisibility();
+                specialVisibility();
                 showClickedItem(moreTitle);
                 startFragment(new MoreFragment());
                 break;
@@ -273,8 +276,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         search_view.setVisibility(View.GONE);
         search_view.setText("");
         back.setVisibility(View.GONE);
-        add.setVisibility(View.VISIBLE);
         search.setVisibility(View.VISIBLE);
+        titleToolbar.setVisibility(View.VISIBLE);
+        openDrawer.setVisibility(View.VISIBLE);
+    }
+    private void specialVisibility(){
+        search_view.setVisibility(View.GONE);
+        search_view.setText("");
+        back.setVisibility(View.GONE);
+        add.setVisibility(View.GONE);
+        search.setVisibility(View.GONE);
         titleToolbar.setVisibility(View.VISIBLE);
         openDrawer.setVisibility(View.VISIBLE);
     }

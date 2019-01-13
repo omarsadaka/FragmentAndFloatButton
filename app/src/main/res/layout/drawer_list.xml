@@ -136,11 +136,11 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/more"/>
+                        android:src="@drawable/calculator"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="More"
+                        android:text="Calc"
                         android:textSize="20sp"
                         android:layout_marginLeft="20dp"
                         android:layout_gravity="center"/>

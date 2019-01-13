@@ -3,13 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:padding="5dp"
+    android:elevation="5dp"
     tools:context="com.example.omar.fragfloat.Activities.MenuDetailsActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
     <RelativeLayout
         android:id="@+id/actionBar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:background="#303F9F"
         android:padding="7dp">
 
@@ -37,7 +49,7 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="5dp">
+        app:cardCornerRadius="10dp">
 
         <RelativeLayout
             android:padding="5dp"
@@ -46,7 +58,7 @@
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="match_parent"
-                android:layout_height="270dp"
+                android:layout_height="300dp"
                 android:src="@mipmap/ic_launcher_round"
                 android:scaleType="fitXY"/>
             <TextView
@@ -55,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/image"
                 android:text="Film Title"
-                android:textSize="25sp"
+                android:textSize="27sp"
                 android:textStyle="bold"
                 android:padding="5dp"/>
 
@@ -65,9 +77,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/title"
                 android:text="Film Description"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 android:textStyle="italic"
                 android:padding="5dp"/>
         </RelativeLayout>
     </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 </LinearLayout>

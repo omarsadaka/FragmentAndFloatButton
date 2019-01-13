@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:src="@drawable/ic_menu_black_24dp"/>
 
         <ImageView
@@ -26,10 +26,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-          android:layout_toLeftOf="@+id/search"
-            android:layout_marginRight="5dp"
+          android:layout_toStartOf="@+id/search"
+            android:layout_marginEnd="5dp"
             android:src="@drawable/new_add"
-            />
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/title_toolbar"
@@ -47,7 +47,7 @@
             android:id="@+id/search"
             android:layout_width="40dp"
             android:layout_height="30dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:src="@drawable/search"
             />
@@ -59,7 +59,6 @@
             android:textColorHint="#fff"
             android:textColor="#FFF"
             android:backgroundTint="#cabebe"
-            android:layout_toRightOf="@+id/back"
             android:layout_toEndOf="@+id/back"
             android:visibility="gone"
 
