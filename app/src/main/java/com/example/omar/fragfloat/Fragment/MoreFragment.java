@@ -179,5 +179,4 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
 
     }
 
-
 }

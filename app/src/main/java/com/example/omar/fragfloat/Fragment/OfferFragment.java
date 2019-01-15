@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -63,6 +64,7 @@ public class OfferFragment extends Fragment implements OnMapReadyCallback , Goog
     private BitmapDescriptor[] iconColor;
     private Button showList;
     Marker marker;
+    private ProgressBar progressBar;
 
 
     @Override
@@ -74,6 +76,7 @@ public class OfferFragment extends Fragment implements OnMapReadyCallback , Goog
         mapFragment.getMapAsync(this);
 
         showList = view.findViewById(R.id.showList);
+        progressBar = view.findViewById(R.id.map_bar);
         showList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -224,10 +227,9 @@ public class OfferFragment extends Fragment implements OnMapReadyCallback , Goog
                                 marker = mMap.addMarker(markerOptions);
                                 marker.setTag(earthQuake.getDetailLink());
                                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat , lon),1));
-
-
-
+                                progressBar.setVisibility(View.GONE);
                             }
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
