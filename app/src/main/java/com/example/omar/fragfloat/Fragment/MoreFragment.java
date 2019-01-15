@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.omar.fragfloat.R;
 
@@ -22,16 +23,28 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
 
     float Value1, Value2;
     boolean mAddition, mSubtract, mMultiplication, mDivision ;
+    View view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
-        View view = getLayoutInflater().inflate(R.layout.fragment_more, container, false);
+         view = getLayoutInflater().inflate(R.layout.fragment_more, container, false);
         createView(view);
         createClick();
         return view;
     }
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        // Checks the orientation of the screen
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Toast.makeText(getContext(), "landscape", Toast.LENGTH_SHORT).show();
+           //  view=getLayoutInflater().inflate(R.layout.frag_more_land_scape,null);
+        }
+    }
+
       public void createView(View v){
           btn_0 = v.findViewById(R.id.btn_0);
           btn_1 = v.findViewById(R.id.btn_1);
@@ -165,8 +178,6 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
           }
 
     }
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-    }
+
+
 }
