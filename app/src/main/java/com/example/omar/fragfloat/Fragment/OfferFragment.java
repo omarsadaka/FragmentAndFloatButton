@@ -232,13 +232,14 @@ public class OfferFragment extends Fragment implements OnMapReadyCallback , Goog
 
                         } catch (JSONException e) {
                             e.printStackTrace();
+
                         }
 
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                progressBar.setVisibility(View.GONE);
             }
         });
         queue.add(objectRequest);

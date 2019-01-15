@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@android:color/transparent"
-    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:background="#ea5656"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <android.support.v4.widget.NestedScrollView
