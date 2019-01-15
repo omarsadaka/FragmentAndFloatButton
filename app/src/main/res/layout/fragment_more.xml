@@ -7,31 +7,27 @@
     tools:context="com.example.omar.fragfloat.Fragment.MoreFragment">
 
     <RelativeLayout
-        android:layout_width="368dp"
-        android:layout_height="495dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008">
 
         <Button
-            android:layout_marginStart="10dp"
             android:id="@+id/btn_1"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/edText1"
-            android:layout_marginTop="60dp"
-
+            android:layout_marginStart="10dp"
             android:text="1"
             android:textSize="18sp"
             tools:ignore="RtlHardcoded" />
 
         <Button
-
             android:id="@+id/btn_0"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
@@ -164,16 +160,15 @@
         <EditText
             android:id="@+id/edText1"
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
+            android:layout_height="70dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="22dp"
             android:ems="10"
+            android:gravity="end"
             android:inputType="textPersonName"
             android:textAlignment="textEnd"
-            android:textSize="24sp"
-            android:gravity="end" />
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/btn_calc"

@@ -1,6 +1,7 @@
 package com.example.omar.fragfloat.Activities;
 
 import android.app.ProgressDialog;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -304,5 +305,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         offerTitle.setVisibility(View.GONE);
         moreTitle.setVisibility(View.GONE);
         clickedItem.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
     }
 }

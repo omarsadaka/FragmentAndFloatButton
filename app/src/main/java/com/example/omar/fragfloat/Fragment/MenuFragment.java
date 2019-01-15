@@ -44,6 +44,7 @@ public class MenuFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setNestedScrollingEnabled(false);
         dialog = new ProgressDialog(getContext());
         dialog.setMessage("Loading...");
         dialog.show();
@@ -78,8 +79,14 @@ public class MenuFragment extends Fragment {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if(s!=null)
-                adapter.getFilter().filter(s.toString());
+                if (adapter == null){
+                    adapter = new RecyclerviewAdapter(getContext() , movies);
+                    if(s!=null)
+                        adapter.getFilter().filter(s.toString());
+                }else {
+                    if (s != null)
+                        adapter.getFilter().filter(s.toString());
+                }
             }
         });
         return view;

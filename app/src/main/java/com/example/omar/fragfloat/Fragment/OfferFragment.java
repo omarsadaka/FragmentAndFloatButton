@@ -3,7 +3,9 @@ package com.example.omar.fragfloat.Fragment;
 import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationListener;
@@ -60,6 +62,7 @@ public class OfferFragment extends Fragment implements OnMapReadyCallback , Goog
     private AlertDialog dialog;
     private BitmapDescriptor[] iconColor;
     private Button showList;
+    Marker marker;
 
 
     @Override
@@ -218,7 +221,7 @@ public class OfferFragment extends Fragment implements OnMapReadyCallback , Goog
                                     markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
                                     mMap.addCircle(circleOptions);
                                 }
-                                Marker marker = mMap.addMarker(markerOptions);
+                                marker = mMap.addMarker(markerOptions);
                                 marker.setTag(earthQuake.getDetailLink());
                                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(lat , lon),1));
 
@@ -333,5 +336,10 @@ public class OfferFragment extends Fragment implements OnMapReadyCallback , Goog
         });
         queue.add(objectRequest);
 
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
     }
 }

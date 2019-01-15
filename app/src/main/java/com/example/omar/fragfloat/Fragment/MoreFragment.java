@@ -1,6 +1,8 @@
 package com.example.omar.fragfloat.Fragment;
 
 import android.content.Context;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -162,5 +164,9 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
                   break;
           }
 
+    }
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
     }
 }

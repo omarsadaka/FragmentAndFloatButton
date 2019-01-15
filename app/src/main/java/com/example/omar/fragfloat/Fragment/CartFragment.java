@@ -1,6 +1,7 @@
 package com.example.omar.fragfloat.Fragment;
 
 import android.app.ProgressDialog;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -45,7 +46,6 @@ public class CartFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = getLayoutInflater().inflate(R.layout.fragment_cart, container, false);
-
         mDatabase = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
@@ -54,8 +54,10 @@ public class CartFragment extends Fragment {
         recyclerView = (RecyclerView)view.findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setNestedScrollingEnabled(false);
         items = new ArrayList<>();
         getData();
+        adapter = new FirebaseAdapter(getContext() , items);
 
         ((MainActivity) getActivity()).search_view.addTextChangedListener(new TextWatcher() {
             @Override
@@ -113,5 +115,8 @@ public class CartFragment extends Fragment {
              }
          });
      }
-
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+    }
 }

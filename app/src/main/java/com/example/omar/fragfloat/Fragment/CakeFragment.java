@@ -1,6 +1,7 @@
 package com.example.omar.fragfloat.Fragment;
 
 import android.app.ProgressDialog;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -39,12 +40,15 @@ public class CakeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_cake, container, false);
         recyclerView = view.findViewById(R.id.films_recycler);
-//        recyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setNestedScrollingEnabled(false);
         dialog = new ProgressDialog(getContext());
         dialog.setMessage("Loading...");
         dialog.show();
+        resultsBeans=new Films();
         apiClient();
+        adapter = new FilmRecyclerViewAdapter(resultsBeans.getResults() , getContext());
 
         ((MainActivity) getActivity()).search_view.addTextChangedListener(new TextWatcher() {
             @Override
@@ -69,7 +73,6 @@ public class CakeFragment extends Fragment {
             @Override
             public void onResponse(@NonNull Call<Films> call, @NonNull Response<Films> response) {
                 Log.e("response" , String.valueOf(response));
-                resultsBeans=new Films();
                 resultsBeans = response.body();
                 if (resultsBeans.getStatus().equals("ok")) {
                     adapter = new FilmRecyclerViewAdapter(resultsBeans.getResults(),getContext());
@@ -87,6 +90,5 @@ public class CakeFragment extends Fragment {
             }
         });
     }
-
 
 }

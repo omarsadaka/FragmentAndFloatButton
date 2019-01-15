@@ -1,5 +1,6 @@
 package com.example.omar.fragfloat.Activities;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -104,5 +105,9 @@ public class QuakeListActivity extends AppCompatActivity {
             }
         });
         queue.add(objectRequest);
+    }
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
     }
 }

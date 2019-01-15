@@ -20,16 +20,19 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAgFi57YRUFsv2xwh4eMWn7qnxTG3igh-s" />
-        <activity android:name=".Activities.MainActivity">
+        <activity android:name=".Activities.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.FilmDetailsActivity" />
-        <activity android:name=".Activities.MenuDetailsActivity"></activity>
-        <activity android:name=".Activities.QuakeListActivity"></activity>
+        <activity android:name=".Activities.FilmDetailsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".Activities.MenuDetailsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
+        <activity android:name=".Activities.QuakeListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
     </application>
 
 </manifest>
